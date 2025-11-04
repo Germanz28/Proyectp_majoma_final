@@ -1,0 +1,46 @@
+/* Estilos modernos y coherentes con la paleta usada */
+
+:root{
+  --bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --accent: #0d6efd;
+  --accent-dark: #0b5ed7;
+  --muted: #6c757d;
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(16,24,40,0.06);
+}
+
+/* Reset / base */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial;background:var(--bg);color:#222;-webkit-font-smoothing:antialiased}
+.container{max-width:1140px;margin:0 auto;padding:1.25rem}
+
+/* Navbar: paleta actualizada a #1e262c -> #16213e */
+.navbar-custom{
+  display:flex;align-items:center;gap:1rem;
+  background: linear-gradient(180deg, #1e262c, #16213e);
+  color: #fff;
+  border-radius:calc(var(--radius)+4px);padding:.6rem 1rem;box-shadow:var(--shadow);
+}
+.navbar-brand{display:flex;align-items:center;gap:.6rem;font-weight:700;color:#fff;text-decoration:none}
+.navbar-brand img{width:44px;height:44px;border-radius:10px;object-fit:cover;box-shadow:0 6px 18px rgba(0,0,0,0.2)}
+.navbar-nav{margin-left:auto;display:flex;align-items:center;gap:.6rem}
+.nav-link{color:#e9eef8;padding:.4rem .6rem;border-radius:8px;text-decoration:none;font-weight:600}
+.nav-link:hover,.nav-link.active{background:rgba(255,255,255,0.06);color:#fff;transform:translateY(-2px)}
+
+/* Search / actions */
+.nav-search{display:flex;align-items:center;gap:.5rem;background:var(--card-bg);padding:.28rem .5rem;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.03)}
+.nav-search input{border:0;outline:0;background:transparent;padding:.25rem;width:200px}
+.small-muted{color:var(--muted);font-size:.92rem}
+
+/* Cards / table */
+.card{background:var(--card-bg);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+.card .card-body{padding:1rem}
+.status-activa{background:#e9f8ef;color:#19692f;padding:.25rem .5rem;border-radius:8px;font-weight:700}
+.status-cancelada{background:#fff0f0;color:#8b1d1d;padding:.25rem .5rem;border-radius:8px;font-weight:700}
+
+/* Responsive */
+@media (max-width:767px){
+  .nav-search{display:none}
+  .navbar-nav .nav-link{display:none}
+}
